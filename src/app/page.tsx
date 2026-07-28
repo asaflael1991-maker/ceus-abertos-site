@@ -2,7 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Section from "@/components/Section";
-import ScrollVideoHero from "@/components/ScrollVideoHero";
+import Hero from "@/components/Hero";
 import VerseReveal from "@/components/VerseReveal";
 import { TagList } from "@/components/Lists";
 import { causaAtendida, areasDeAtuacao } from "@/content/institucional";
@@ -12,7 +12,7 @@ export default function HomePage() {
     <>
       <Navbar />
 
-      <ScrollVideoHero />
+      <Hero />
 
       <div className="border-b border-[#1d1d1b]/10 px-6 py-20 text-center lg:px-12 lg:py-28">
         <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#1d1d1b]/50">
