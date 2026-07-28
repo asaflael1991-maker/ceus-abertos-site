@@ -130,21 +130,20 @@ export default function Hero() {
           esquerda */}
       <div className="absolute inset-0 flex items-center">
         <motion.div
-          className="mx-6 max-w-xl rounded-[2rem] border border-[#ffffff]/25 bg-[#ffffff]/10 p-8 shadow-2xl shadow-black/10 backdrop-blur-xl sm:p-10 lg:ml-16"
+          className="mx-6 w-full max-w-xl rounded-[2rem] border border-[#ffffff]/25 bg-[#ffffff]/10 p-8 shadow-2xl shadow-black/10 backdrop-blur-xl sm:p-10 lg:ml-16"
           initial={shouldReduceMotion ? undefined : { opacity: 0, y: 24 }}
           animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="relative aspect-[3264/1620] w-full">
-            <Image
-              src="/images/hero/texto-hero.png"
-              alt="O céu se abre. A esperança desce. A vida se transforma."
-              fill
-              priority
-              sizes="(max-width: 640px) 90vw, 36rem"
-              className="object-contain"
-            />
-          </div>
+          <Image
+            src="/images/hero/texto-hero.png"
+            alt="O céu se abre. A esperança desce. A vida se transforma."
+            width={3264}
+            height={1620}
+            priority
+            sizes="(max-width: 640px) 90vw, 36rem"
+            className="h-auto w-full"
+          />
         </motion.div>
       </div>
     </section>
