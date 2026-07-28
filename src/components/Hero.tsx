@@ -8,12 +8,11 @@ import { motion, useReducedMotion } from "framer-motion";
  * anterior (sem vídeo/scroll): fundo estático do céu azul, nuvem
  * grande à direita que aparece com uma animação de entrada assim que
  * a página carrega e continua flutuando (balanço leve, contínuo), e
- * o texto entra linha por linha à esquerda.
+ * o texto (imagem própria, fornecida pelo cliente) entra sobre um
+ * painel de "vidro fosco" (glass morphism) à esquerda.
  *
  * Com `prefers-reduced-motion`, tudo aparece direto, sem animação.
  */
-
-const linhas = ["O céu se abre.", "A esperança desce.", "A vida se transforma."];
 
 /** Pássaro simples (silhueta), batendo asas continuamente — o "M"
  *  clássico de pássaro visto de longe. A batida das asas é uma
@@ -127,25 +126,26 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Texto: entra linha por linha, à esquerda */}
+      {/* Texto (imagem própria) sobre um painel de vidro fosco, à
+          esquerda */}
       <div className="absolute inset-0 flex items-center">
-        <div className="max-w-xl px-6 lg:px-16">
-          {linhas.map((linha, i) => (
-            <motion.p
-              key={linha}
-              className="text-3xl font-light uppercase tracking-wide text-[#ffffff] [text-shadow:0_2px_16px_rgba(0,0,0,0.25)] sm:text-5xl lg:text-6xl"
-              initial={shouldReduceMotion ? undefined : { opacity: 0, y: 24 }}
-              animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.7,
-                delay: 0.3 + i * 0.4,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            >
-              {linha}
-            </motion.p>
-          ))}
-        </div>
+        <motion.div
+          className="mx-6 max-w-xl rounded-[2rem] border border-[#ffffff]/25 bg-[#ffffff]/10 p-8 shadow-2xl shadow-black/10 backdrop-blur-xl sm:p-10 lg:ml-16"
+          initial={shouldReduceMotion ? undefined : { opacity: 0, y: 24 }}
+          animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <div className="relative aspect-[3264/1620] w-full">
+            <Image
+              src="/images/hero/texto-hero.png"
+              alt="O céu se abre. A esperança desce. A vida se transforma."
+              fill
+              priority
+              sizes="(max-width: 640px) 90vw, 36rem"
+              className="object-contain"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
