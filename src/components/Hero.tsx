@@ -126,11 +126,12 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Texto (imagem própria) sobre um painel de vidro fosco, à
-          esquerda */}
+      {/* Texto (imagem própria), direto sobre o céu — com uma sombra
+          suave (drop-shadow) só pra garantir leitura em qualquer
+          trecho do fundo. */}
       <div className="absolute inset-0 flex items-center">
         <motion.div
-          className="mx-6 w-full max-w-xl rounded-[2rem] border border-[#ffffff]/25 bg-[#ffffff]/10 p-8 shadow-2xl shadow-black/10 backdrop-blur-xl sm:p-10 lg:ml-16"
+          className="mx-6 w-full max-w-xl lg:ml-16"
           initial={shouldReduceMotion ? undefined : { opacity: 0, y: 24 }}
           animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -142,7 +143,7 @@ export default function Hero() {
             height={1620}
             priority
             sizes="(max-width: 640px) 90vw, 36rem"
-            className="h-auto w-full"
+            className="h-auto w-full drop-shadow-[0_4px_20px_rgba(0,0,0,0.35)]"
           />
         </motion.div>
       </div>

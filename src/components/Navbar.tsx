@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -13,11 +14,6 @@ import { useEffect, useState } from "react";
  * menu fica transparente com texto branco — assim que a pessoa rola
  * além do hero (ou em qualquer outra página), volta ao normal (fundo
  * branco, texto escuro).
- *
- * OBS: ainda não temos uma logo definitiva da Associação Céus Abertos
- * (é diferente da logo da Igreja Colheita). Por enquanto uso um
- * selo simples (círculo com "sol"), fácil de trocar depois — é só
- * substituir este SVG por um <Image> apontando pra logo oficial.
  */
 
 const pages = [
@@ -29,38 +25,6 @@ const pages = [
   { href: "/galeria", label: "Galeria" },
   { href: "/contato", label: "Contato" },
 ];
-
-function Selo() {
-  return (
-    <svg
-      viewBox="0 0 40 40"
-      className="h-9 w-9 shrink-0"
-      aria-hidden
-    >
-      <circle cx="20" cy="20" r="19" fill="none" stroke="#468683" strokeWidth="1.5" />
-      <circle cx="20" cy="20" r="7" fill="#468683" />
-      {Array.from({ length: 8 }).map((_, i) => {
-        const angle = (i * Math.PI) / 4;
-        const x1 = 20 + Math.cos(angle) * 11;
-        const y1 = 20 + Math.sin(angle) * 11;
-        const x2 = 20 + Math.cos(angle) * 15.5;
-        const y2 = 20 + Math.sin(angle) * 15.5;
-        return (
-          <line
-            key={i}
-            x1={x1}
-            y1={y1}
-            x2={x2}
-            y2={y2}
-            stroke="#468683"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        );
-      })}
-    </svg>
-  );
-}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -98,7 +62,14 @@ export default function Navbar() {
           className="flex shrink-0 items-center gap-3"
           onClick={() => setOpen(false)}
         >
-          <Selo />
+          <Image
+            src="/images/logo.png"
+            alt="Associação Cristã Céus Abertos"
+            width={1080}
+            height={1080}
+            priority
+            className="h-11 w-11 shrink-0"
+          />
           <span
             className={`text-lg font-medium leading-tight tracking-tight transition-colors ${
               transparent ? "text-[#ffffff]" : "text-[#1d1d1b]"
