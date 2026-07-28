@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import LogoMark from "@/components/LogoMark";
 
 /**
  * Navbar — menu fixo no topo. Como este é um site de VÁRIAS páginas
@@ -59,26 +59,14 @@ export default function Navbar() {
       <nav className="relative mx-auto flex min-h-[4.5rem] max-w-[1440px] items-center px-6 py-2 lg:px-12">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-3"
+          className="flex shrink-0 items-center"
           onClick={() => setOpen(false)}
         >
-          <Image
-            src="/images/logo.png"
-            alt="Associação Cristã Céus Abertos"
-            width={1080}
-            height={1080}
-            priority
-            className="h-11 w-11 shrink-0"
-          />
-          <span
-            className={`text-lg font-medium leading-tight tracking-tight transition-colors ${
-              transparent ? "text-[#ffffff]" : "text-[#1d1d1b]"
+          <LogoMark
+            className={`h-9 w-auto transition-colors sm:h-10 ${
+              transparent ? "text-[#ffffff]" : "text-[#468683]"
             }`}
-          >
-            Céus
-            <br />
-            Abertos
-          </span>
+          />
         </Link>
 
         <ul className="mx-auto hidden flex-wrap items-center justify-center gap-x-6 gap-y-1 lg:flex">

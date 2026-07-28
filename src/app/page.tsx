@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import Hero from "@/components/Hero";
-import VerseReveal from "@/components/VerseReveal";
 import { TagList } from "@/components/Lists";
 import { causaAtendida, areasDeAtuacao } from "@/content/institucional";
 
@@ -13,21 +12,6 @@ export default function HomePage() {
       <Navbar />
 
       <Hero />
-
-      <div className="border-b border-[#1d1d1b]/10 px-6 py-20 text-center lg:px-12 lg:py-28">
-        <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#1d1d1b]/50">
-          Associação Cristã Céus Abertos
-        </p>
-        <VerseReveal
-          text="2 Coríntios 9:7"
-          className="mx-auto text-3xl text-[#1d1d1b] sm:text-5xl lg:text-7xl"
-        />
-        <p className="mx-auto mt-6 max-w-xl text-lg text-[#1d1d1b]/70">
-          Cuidamos de famílias, crianças e pessoas em situação de
-          vulnerabilidade, levando alimento, acolhimento e esperança em
-          Fortaleza, Ceará.
-        </p>
-      </div>
 
       <Section
         id="intro"
