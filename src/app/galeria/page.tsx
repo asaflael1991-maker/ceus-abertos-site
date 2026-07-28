@@ -24,15 +24,15 @@ export default function GaleriaPage() {
           </h1>
         </FadeInView>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {galeria.map((g, i) => (
-            <FadeInView key={g.src} delay={i * 0.08}>
+            <FadeInView key={g.src} delay={Math.min(i * 0.06, 0.6)}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image
                   src={g.src}
                   alt={g.alt}
                   fill
-                  sizes="(max-width: 640px) 100vw, 50vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
               </div>

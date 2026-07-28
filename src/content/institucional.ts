@@ -209,6 +209,58 @@ export const galeria = [
     src: "/images/galeria/foto-02.jpg",
     alt: "Atendimento a famílias no Mercado Solidário",
   },
+  {
+    src: "/images/galeria/foto-03.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-04.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-05.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-06.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-07.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-08.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-09.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-10.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-11.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-12.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-13.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-14.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/foto-15.jpg",
+    alt: "Ação social da Associação Cristã Céus Abertos",
+  },
 ];
 
 /** Áreas de interesse oferecidas no formulário de voluntariado —
