@@ -86,7 +86,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors duration-300 ${
+      className={`${isHome ? "fixed" : "sticky"} inset-x-0 top-0 z-50 transition-colors duration-300 ${
         transparent
           ? "bg-transparent"
           : "border-b border-[#1d1d1b]/10 bg-[#ffffff]/90 backdrop-blur"
