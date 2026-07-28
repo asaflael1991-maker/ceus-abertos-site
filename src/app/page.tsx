@@ -1,155 +1,124 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import StickyPhoto from "@/components/StickyPhoto";
+import Section from "@/components/Section";
+import ScrollVideoHero from "@/components/ScrollVideoHero";
 import VerseReveal from "@/components/VerseReveal";
+import { TagList } from "@/components/Lists";
 import { causaAtendida, areasDeAtuacao } from "@/content/institucional";
 
-/**
- * Home — sequência de "capítulos" com foto em tela cheia atrás de
- * cada seção, inspirada no site da Igreja da Cidade
- * (igrejadacidade.org.br): número do capítulo + etiqueta + título +
- * texto curto, ancorados na base da foto.
- *
- * Como só temos 4 fotos da ONG hoje, elas se repetem entre os
- * capítulos — quando houver mais fotos, é só trocar os `src` abaixo.
- */
 export default function HomePage() {
   return (
     <>
       <Navbar />
 
-      <StickyPhoto
-        src="/images/hero/peoples.png"
-        alt="Voluntários da Associação Cristã Céus Abertos atendendo pessoas em situação de rua"
-      >
+      <ScrollVideoHero />
+
+      <div className="border-b border-[#1d1d1b]/10 px-6 py-20 text-center lg:px-12 lg:py-28">
+        <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#1d1d1b]/50">
+          Associação Cristã Céus Abertos
+        </p>
         <VerseReveal
           text="2 Coríntios 9:7"
-          className="text-4xl text-white sm:text-6xl lg:text-8xl"
+          className="mx-auto text-3xl text-[#1d1d1b] sm:text-5xl lg:text-7xl"
         />
-      </StickyPhoto>
+        <p className="mx-auto mt-6 max-w-xl text-lg text-[#1d1d1b]/70">
+          Cuidamos de famílias, crianças e pessoas em situação de
+          vulnerabilidade, levando alimento, acolhimento e esperança em
+          Fortaleza, Ceará.
+        </p>
+      </div>
 
-      {/* Capítulo 01 — Quem somos */}
-      <StickyPhoto
-        src="/images/galeria/foto-01.jpg"
-        alt="Voluntários organizando doações no Mercado Solidário"
-        imageWidth={960}
-        imageHeight={1280}
+      <Section
+        id="intro"
+        number="01"
+        eyebrow="Quem somos"
+        title="Uma associação a serviço da comunidade."
       >
-        <p className="mb-2 text-xs tracking-[0.2em] text-white/50">
-          01 — Céus Abertos
-        </p>
-        <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-[#f8a800]">
-          Quem somos
-        </p>
-        <h2 className="mb-5 max-w-2xl text-2xl font-medium tracking-tight text-white sm:text-3xl lg:text-5xl">
-          Uma associação a serviço da comunidade.
-        </h2>
-        <p className="mb-6 max-w-xl text-sm text-white/85 lg:text-lg">
-          Cuidamos de famílias, crianças, adolescentes, jovens e pessoas em
-          situação de vulnerabilidade, oferecendo alimento, acolhimento e
-          novas oportunidades em Fortaleza, Ceará.
-        </p>
-        <Link
-          href="/quem-somos"
-          className="inline-block rounded-full bg-white px-6 py-3 text-sm text-[#1d1d1b] transition-opacity hover:opacity-90"
-        >
-          Conheça nossa história
-        </Link>
-      </StickyPhoto>
-
-      {/* Capítulo 02 — Causa atendida */}
-      <StickyPhoto
-        src="/images/galeria/foto-02.jpg"
-        alt="Atendimento a famílias no Mercado Solidário"
-        imageWidth={960}
-        imageHeight={1280}
-      >
-        <p className="mb-2 text-xs tracking-[0.2em] text-white/50">
-          02 — Céus Abertos
-        </p>
-        <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-[#f8a800]">
-          Causa atendida
-        </p>
-        <h2 className="mb-5 max-w-2xl text-2xl font-medium tracking-tight text-white sm:text-3xl lg:text-5xl">
-          Situações de vulnerabilidade que enfrentamos todos os dias.
-        </h2>
-        <p className="max-w-xl text-sm text-white/85 lg:text-lg">
-          {causaAtendida.slice(0, 5).join(", ")} e muito mais — atuamos tanto
-          na urgência quanto na prevenção.
-        </p>
-      </StickyPhoto>
-
-      {/* Capítulo 03 — Áreas de atuação */}
-      <StickyPhoto
-        src="/images/mercado/mercado.jpg"
-        alt="Voluntários organizando doações de alimentos no Mercado Solidário"
-        imageWidth={1871}
-        imageHeight={822}
-      >
-        <p className="mb-2 text-xs tracking-[0.2em] text-white/50">
-          03 — Céus Abertos
-        </p>
-        <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-[#f8a800]">
-          Como atuamos
-        </p>
-        <h2 className="mb-5 max-w-2xl text-2xl font-medium tracking-tight text-white sm:text-3xl lg:text-5xl">
-          Nossas frentes de atuação.
-        </h2>
-        <p className="mb-6 max-w-xl text-sm text-white/85 lg:text-lg">
-          {areasDeAtuacao
-            .slice(0, 4)
-            .map((a) => a.title)
-            .join(" · ")}{" "}
-          e mais.
-        </p>
-        <Link
-          href="/areas-de-atuacao"
-          className="inline-block rounded-full bg-white px-6 py-3 text-sm text-[#1d1d1b] transition-opacity hover:opacity-90"
-        >
-          Ver todas as áreas de atuação
-        </Link>
-      </StickyPhoto>
-
-      {/* Capítulo 04 — Participe */}
-      <StickyPhoto
-        src="/images/hero/peoples.png"
-        alt="Voluntários da Associação Cristã Céus Abertos atendendo pessoas em situação de rua"
-      >
-        <p className="mb-2 text-xs tracking-[0.2em] text-white/50">
-          04 — Céus Abertos
-        </p>
-        <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-[#f8a800]">
-          Participe
-        </p>
-        <h2 className="mb-5 max-w-2xl text-2xl font-medium tracking-tight text-white sm:text-3xl lg:text-5xl">
-          Você pode fazer parte dessa história.
-        </h2>
-        <p className="mb-6 max-w-xl text-sm text-white/85 lg:text-lg">
-          Seja doando, servindo como voluntário ou levando um pedido de
-          ajuda até nós — cada gesto importa.
-        </p>
-        <div className="flex flex-wrap gap-3">
+        <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-[#1d1d1b]/70">
+          <p>
+            A Associação Cristã Céus Abertos é uma organização social cristã,
+            sem fins lucrativos, sediada em Fortaleza, Ceará. Cuidamos de
+            famílias, crianças, adolescentes, jovens e pessoas em situação de
+            vulnerabilidade, oferecendo alimento, acolhimento e novas
+            oportunidades.
+          </p>
           <Link
-            href="/doacoes"
-            className="rounded-full bg-[#e5192c] px-5 py-2.5 text-sm text-white transition-opacity hover:opacity-90 lg:px-6 lg:py-3"
+            href="/quem-somos"
+            className="inline-block rounded-full border border-[#1d1d1b]/20 px-6 py-3 text-sm transition-colors hover:bg-[#1d1d1b] hover:text-[#ffffff]"
           >
-            Fazer uma doação
-          </Link>
-          <Link
-            href="/voluntariado"
-            className="rounded-full border border-white/40 px-5 py-2.5 text-sm text-white transition-colors hover:bg-white/10 lg:px-6 lg:py-3"
-          >
-            Tornar-se voluntário
-          </Link>
-          <Link
-            href="/atendimento"
-            className="rounded-full border border-white/40 px-5 py-2.5 text-sm text-white transition-colors hover:bg-white/10 lg:px-6 lg:py-3"
-          >
-            Solicitar atendimento
+            Conheça nossa história
           </Link>
         </div>
-      </StickyPhoto>
+      </Section>
+
+      <Section
+        id="causa"
+        number="02"
+        eyebrow="Causa atendida"
+        title="Situações de vulnerabilidade social que enfrentamos todos os dias."
+        tone="inverted"
+      >
+        <TagList items={causaAtendida} />
+      </Section>
+
+      <Section
+        id="areas"
+        number="03"
+        eyebrow="Como atuamos"
+        title="Nossas frentes de atuação."
+      >
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {areasDeAtuacao.slice(0, 6).map((a) => (
+            <div key={a.title}>
+              <h3 className="mb-1 font-medium">{a.title}</h3>
+              <p className="text-sm text-[#1d1d1b]/60">{a.text}</p>
+            </div>
+          ))}
+        </div>
+        <Link
+          href="/areas-de-atuacao"
+          className="mt-8 inline-block text-sm font-medium text-[#e5192c] hover:opacity-80"
+        >
+          Ver todas as áreas de atuação →
+        </Link>
+      </Section>
+
+      <Section
+        id="cta"
+        number="04"
+        eyebrow="Participe"
+        title="Você pode fazer parte dessa história."
+        tone="accent"
+        eyebrowColor="text-[#1d1d1b]"
+      >
+        <div className="max-w-3xl space-y-6 text-lg leading-relaxed text-[#ffffff]/90">
+          <p>
+            Seja doando, servindo como voluntário ou levando um pedido de
+            ajuda até nós — cada gesto importa.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/doacoes"
+              className="rounded-full bg-[#ffffff] px-6 py-3 text-sm text-[#1d1d1b] transition-opacity hover:opacity-90"
+            >
+              Fazer uma doação
+            </Link>
+            <Link
+              href="/voluntariado"
+              className="rounded-full border border-[#ffffff]/40 px-6 py-3 text-sm text-[#ffffff] transition-colors hover:bg-[#ffffff]/10"
+            >
+              Tornar-se voluntário
+            </Link>
+            <Link
+              href="/atendimento"
+              className="rounded-full border border-[#ffffff]/40 px-6 py-3 text-sm text-[#ffffff] transition-colors hover:bg-[#ffffff]/10"
+            >
+              Solicitar atendimento
+            </Link>
+          </div>
+        </div>
+      </Section>
 
       <Footer />
     </>

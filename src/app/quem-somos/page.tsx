@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FadeInView from "@/components/FadeInView";
-import StickyPhoto from "@/components/StickyPhoto";
 import { TagList, BulletList } from "@/components/Lists";
 import { missao, visaoFutura, valores } from "@/content/institucional";
 
@@ -14,11 +13,6 @@ export default function QuemSomosPage() {
   return (
     <>
       <Navbar />
-
-      <StickyPhoto
-        src="/images/hero/peoples.png"
-        alt="Voluntários da Associação Cristã Céus Abertos atendendo pessoas em situação de rua"
-      />
 
       <main className="mx-auto max-w-[900px] px-6 py-20 lg:px-12 lg:py-28">
         <FadeInView>
