@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -67,6 +68,16 @@ export default function HomePage() {
           Ver todas as áreas de atuação →
         </Link>
       </Section>
+
+      <div className="relative aspect-[21/9] w-full sm:aspect-[3/1]">
+        <Image
+          src="/images/home/participe.jpg"
+          alt="Voluntária entregando alimento a uma pessoa em situação de rua"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
 
       <Section
         id="cta"
