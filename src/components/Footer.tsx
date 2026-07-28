@@ -7,7 +7,7 @@ export default function Footer() {
         <p className="mb-3 text-xs uppercase tracking-[0.3em] text-[#ffffff]/50">
           Vamos juntos
         </p>
-        <h2 className="max-w-3xl font-[family-name:var(--font-display)] text-3xl font-medium tracking-tight lg:text-5xl">
+        <h2 className="max-w-3xl text-3xl font-medium tracking-tight lg:text-5xl">
           Manter os céus abertos sobre a comunidade, com amor, cuidado e
           serviço.
         </h2>

@@ -86,7 +86,7 @@ export default function Hero() {
           carregar a página, depois flutua continuamente (balanço um
           pouco mais perceptível que um simples drift, sem exagerar). */}
       <motion.div
-        className="pointer-events-none absolute right-[-4%] top-1/2 h-[55%] w-[55%] -translate-y-1/2 sm:h-[65%] sm:w-[48%] lg:h-[75%] lg:w-[42%]"
+        className="pointer-events-none absolute right-[-10%] top-1/2 h-[70%] w-[75%] -translate-y-1/2 sm:h-[80%] sm:w-[60%] lg:right-[-6%] lg:h-[95%] lg:w-[54%]"
         initial={shouldReduceMotion ? undefined : { opacity: 0, scale: 0.92 }}
         animate={
           shouldReduceMotion
@@ -121,7 +121,7 @@ export default function Hero() {
             alt="Nuvem em formato de coração com asas"
             fill
             priority
-            sizes="(max-width: 640px) 55vw, (max-width: 1024px) 48vw, 42vw"
+            sizes="(max-width: 640px) 75vw, (max-width: 1024px) 60vw, 54vw"
             className="object-contain"
           />
         </motion.div>
@@ -133,7 +133,7 @@ export default function Hero() {
           {linhas.map((linha, i) => (
             <motion.p
               key={linha}
-              className="font-[family-name:var(--font-display)] text-3xl font-medium tracking-tight text-[#1d1d1b] sm:text-5xl lg:text-6xl"
+              className="text-3xl font-light uppercase tracking-wide text-[#1d1d1b] sm:text-5xl lg:text-6xl"
               initial={shouldReduceMotion ? undefined : { opacity: 0, y: 24 }}
               animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
               transition={{

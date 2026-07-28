@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
-import { Cormorant, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import FloatingDonateButton from "@/components/FloatingDonateButton";
-
-const display = Cormorant({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["500", "600"],
-});
 
 const body = Inter({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "900"],
+  weight: ["300", "400", "500", "900"],
 });
 
 export const metadata: Metadata = {
@@ -28,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${display.variable} ${body.variable} antialiased`}>
+      <body className={`${body.variable} antialiased`}>
         {children}
         <FloatingDonateButton />
       </body>

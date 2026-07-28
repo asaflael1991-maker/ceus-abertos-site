@@ -68,7 +68,7 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         >
           <Selo />
-          <span className="font-[family-name:var(--font-display)] text-lg font-medium leading-tight tracking-tight">
+          <span className="text-lg font-medium leading-tight tracking-tight">
             Céus
             <br />
             Abertos
