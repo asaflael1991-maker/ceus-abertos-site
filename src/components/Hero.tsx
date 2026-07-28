@@ -15,6 +15,30 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const linhas = ["O céu se abre.", "A esperança desce.", "A vida se transforma."];
 
+/** Pássaro simples (silhueta), batendo asas continuamente — o "M"
+ *  clássico de pássaro visto de longe. A batida das asas é uma
+ *  animação de path separada da animação de voo (que move o
+ *  conjunto pela tela), pra não misturar as duas velocidades. */
+function Bird({ className }: { className?: string }) {
+  const shouldReduceMotion = useReducedMotion();
+  const wingUp = "M0 9 Q9 1 18 9 Q27 1 36 9";
+  const wingDown = "M0 9 Q9 14 18 9 Q27 14 36 9";
+
+  return (
+    <svg viewBox="0 0 36 18" className={className} aria-hidden>
+      <motion.path
+        d={wingUp}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        animate={shouldReduceMotion ? undefined : { d: [wingUp, wingDown, wingUp] }}
+        transition={{ duration: 0.7, repeat: Infinity, ease: "easeInOut" }}
+      />
+    </svg>
+  );
+}
+
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
 
@@ -28,6 +52,35 @@ export default function Hero() {
         sizes="100vw"
         className="object-cover"
       />
+
+      {/* Pássaros ao longe — voo contínuo, em loop lento e suave */}
+      {!shouldReduceMotion && (
+        <>
+          <motion.div
+            className="pointer-events-none absolute h-3 w-7 text-[#1d1d1b]/30"
+            style={{ left: "8%", top: "78%" }}
+            animate={{
+              x: [0, 40, 90, 40, 0],
+              y: [0, -14, 4, 18, 0],
+            }}
+            transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Bird className="h-full w-full" />
+          </motion.div>
+
+          <motion.div
+            className="pointer-events-none absolute h-3.5 w-8 text-[#1d1d1b]/25"
+            style={{ left: "46%", top: "14%" }}
+            animate={{
+              x: [0, -55, -20, 30, 0],
+              y: [0, 10, 26, 8, 0],
+            }}
+            transition={{ duration: 32, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          >
+            <Bird className="h-full w-full" />
+          </motion.div>
+        </>
+      )}
 
       {/* Nuvem: grande, à direita — entra com fade + leve escala ao
           carregar a página, depois flutua continuamente (balanço um
