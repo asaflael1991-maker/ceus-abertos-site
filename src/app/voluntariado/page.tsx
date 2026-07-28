@@ -142,7 +142,7 @@ export default function VoluntariadoPage() {
 
             <button
               type="submit"
-              className="rounded-full bg-[#e5192c] px-8 py-3 text-sm text-[#ffffff] transition-opacity hover:opacity-90"
+              className="rounded-full bg-[#468683] px-8 py-3 text-sm text-[#ffffff] transition-opacity hover:opacity-90"
             >
               Enviar cadastro
             </button>

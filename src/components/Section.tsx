@@ -18,7 +18,7 @@ export default function Section({
   title,
   children,
   tone = "default",
-  eyebrowColor = "text-[#f8a800]",
+  eyebrowColor,
 }: {
   id: string;
   /** Número do "capítulo" (ex: "01"), exibido como etiqueta discreta
@@ -28,19 +28,26 @@ export default function Section({
   title: string;
   children?: ReactNode;
   tone?: "default" | "inverted" | "accent";
-  /** Cor do texto pequeno acima do título (padrão: dourado da marca) */
+  /** Cor do texto pequeno acima do título. Se omitido, usa um padrão
+   *  sensato de acordo com o `tone` (ver `eyebrowDefaultByTone`). */
   eyebrowColor?: string;
 }) {
   const backgrounds: Record<"default" | "inverted" | "accent", string> = {
     default: "bg-[#ffffff] text-[#1d1d1b]",
-    inverted: "bg-[#1d1d1b] text-[#ffffff]",
-    accent: "bg-[#e5192c] text-[#ffffff]",
+    inverted: "bg-[#468683] text-[#ffffff]",
+    accent: "bg-[#ede8db] text-[#1d1d1b]",
   };
   const mutedByTone: Record<"default" | "inverted" | "accent", string> = {
     default: "text-[#1d1d1b]/40",
-    inverted: "text-[#ffffff]/40",
+    inverted: "text-[#ffffff]/50",
     accent: "text-[#1d1d1b]/50",
   };
+  const eyebrowDefaultByTone: Record<"default" | "inverted" | "accent", string> = {
+    default: "text-[#468683]",
+    inverted: "text-[#ede8db]",
+    accent: "text-[#468683]",
+  };
+  const resolvedEyebrowColor = eyebrowColor ?? eyebrowDefaultByTone[tone];
 
   return (
     <section
@@ -55,7 +62,7 @@ export default function Section({
         )}
         {eyebrow && (
           <p
-            className={`mb-3 text-xs font-medium uppercase tracking-[0.3em] ${eyebrowColor}`}
+            className={`mb-3 text-xs font-medium uppercase tracking-[0.3em] ${resolvedEyebrowColor}`}
           >
             {eyebrow}
           </p>

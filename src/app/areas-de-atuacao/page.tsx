@@ -78,13 +78,13 @@ export default function AreasDeAtuacaoPage() {
         <FadeInView className="mt-14 flex flex-wrap gap-4 border-t border-[#1d1d1b]/10 pt-10">
           <Link
             href="/voluntariado"
-            className="rounded-full bg-[#e5192c] px-6 py-3 text-sm text-[#ffffff] transition-opacity hover:opacity-90"
+            className="rounded-full bg-[#468683] px-6 py-3 text-sm text-[#ffffff] transition-opacity hover:opacity-90"
           >
             Tornar-se voluntário
           </Link>
           <Link
             href="/doacoes"
-            className="rounded-full border border-[#1d1d1b]/20 px-6 py-3 text-sm transition-colors hover:bg-[#1d1d1b] hover:text-[#ffffff]"
+            className="rounded-full border border-[#468683]/40 px-6 py-3 text-sm text-[#468683] transition-colors hover:bg-[#468683]/10"
           >
             Fazer uma doação
           </Link>

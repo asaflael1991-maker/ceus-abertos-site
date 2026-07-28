@@ -21,7 +21,7 @@ export default function PixCopyButton({ pixKey }: { pixKey: string }) {
   };
 
   return (
-    <div className="mt-8 flex flex-col gap-3 rounded-2xl border border-[#ffffff]/15 bg-[#ffffff]/5 p-6 sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex flex-col gap-3 rounded-2xl border border-[#ffffff]/15 bg-[#ffffff]/5 p-6 sm:flex-row sm:items-center sm:justify-between">
       <div>
         <p className="text-xs uppercase tracking-[0.2em] text-[#ffffff]/50">
           Chave PIX (CNPJ)

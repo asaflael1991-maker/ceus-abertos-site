@@ -146,7 +146,7 @@ export default function QuemSomosPage() {
             compromisso de transformar a fé em atitudes concretas. Cremos
             que pequenas ações podem produzir grandes mudanças.
           </p>
-          <blockquote className="mt-8 border-l-2 border-[#f8a800] pl-4 text-xl italic text-[#1d1d1b]/70">
+          <blockquote className="mt-8 border-l-2 border-[#468683] pl-4 text-xl italic text-[#1d1d1b]/70">
             &ldquo;Nossa missão é manter os céus abertos sobre a comunidade
             por meio do amor, do cuidado, da solidariedade e do
             serviço.&rdquo;

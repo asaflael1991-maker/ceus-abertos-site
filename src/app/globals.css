@@ -4,8 +4,8 @@
   --color-bg: #ffffff;
   --color-ink: #1d1d1b;
   --color-ink-soft: rgba(29, 29, 27, 0.5);
-  --color-brand-red: #e5192c;
-  --color-brand-gold: #f8a800;
+  --color-brand-red: #468683;
+  --color-brand-gold: #468683;
 }
 
 @theme inline {

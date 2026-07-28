@@ -29,12 +29,12 @@ export default function DoacoesPage() {
           </p>
         </FadeInView>
 
-        <FadeInView className="rounded-2xl bg-[#1d1d1b] p-8">
+        <FadeInView className="rounded-2xl bg-[#468683] p-8">
           <PixCopyButton pixKey="42.118.366/0001-00" />
         </FadeInView>
 
         <FadeInView className="mt-14 border-t border-[#1d1d1b]/10 pt-10 text-lg leading-relaxed text-[#1d1d1b]/70">
-          <blockquote className="border-l-2 border-[#f8a800] pl-4 italic">
+          <blockquote className="border-l-2 border-[#468683] pl-4 italic">
             &ldquo;Cada um contribua segundo propôs no coração, não com
             tristeza ou por obrigação, porque Deus ama quem dá com
             alegria.&rdquo;

@@ -17,7 +17,7 @@ export default function FloatingDonateButton() {
   return (
     <Link
       href="/doacoes"
-      className="fixed bottom-5 right-5 z-40 rounded-full bg-[#e5192c] px-5 py-3 text-sm font-medium text-[#ffffff] shadow-lg shadow-black/20 transition-transform hover:scale-105 lg:bottom-8 lg:right-8"
+      className="fixed bottom-5 right-5 z-40 rounded-full bg-[#468683] px-5 py-3 text-sm font-medium text-[#ffffff] shadow-lg shadow-black/20 transition-transform hover:scale-105 lg:bottom-8 lg:right-8"
     >
       Doe aqui
     </Link>

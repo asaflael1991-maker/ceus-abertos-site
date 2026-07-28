@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1d1d1b] text-[#ffffff]">
+    <footer className="bg-[#468683] text-[#ffffff]">
       <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-12 lg:py-24">
         <p className="mb-3 text-xs uppercase tracking-[0.3em] text-[#ffffff]/50">
           Vamos juntos
@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="mt-10 flex flex-wrap gap-4">
           <Link
             href="/doacoes"
-            className="rounded-full bg-[#e5192c] px-6 py-3 text-sm transition-opacity hover:opacity-90"
+            className="rounded-full bg-[#ffffff] px-6 py-3 text-sm text-[#468683] transition-opacity hover:opacity-90"
           >
             Fazer uma doação
           </Link>

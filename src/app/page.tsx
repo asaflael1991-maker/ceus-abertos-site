@@ -45,7 +45,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/quem-somos"
-            className="inline-block rounded-full border border-[#1d1d1b]/20 px-6 py-3 text-sm transition-colors hover:bg-[#1d1d1b] hover:text-[#ffffff]"
+            className="inline-block rounded-full border border-[#468683]/40 px-6 py-3 text-sm text-[#468683] transition-colors hover:bg-[#468683]/10"
           >
             Conheça nossa história
           </Link>
@@ -78,7 +78,7 @@ export default function HomePage() {
         </div>
         <Link
           href="/areas-de-atuacao"
-          className="mt-8 inline-block text-sm font-medium text-[#e5192c] hover:opacity-80"
+          className="mt-8 inline-block text-sm font-medium text-[#468683] hover:opacity-80"
         >
           Ver todas as áreas de atuação →
         </Link>
@@ -90,9 +90,8 @@ export default function HomePage() {
         eyebrow="Participe"
         title="Você pode fazer parte dessa história."
         tone="accent"
-        eyebrowColor="text-[#1d1d1b]"
       >
-        <div className="max-w-3xl space-y-6 text-lg leading-relaxed text-[#ffffff]/90">
+        <div className="max-w-3xl space-y-6 text-lg leading-relaxed text-[#1d1d1b]/75">
           <p>
             Seja doando, servindo como voluntário ou levando um pedido de
             ajuda até nós — cada gesto importa.
@@ -100,19 +99,19 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/doacoes"
-              className="rounded-full bg-[#ffffff] px-6 py-3 text-sm text-[#1d1d1b] transition-opacity hover:opacity-90"
+              className="rounded-full bg-[#468683] px-6 py-3 text-sm text-[#ffffff] transition-opacity hover:opacity-90"
             >
               Fazer uma doação
             </Link>
             <Link
               href="/voluntariado"
-              className="rounded-full border border-[#ffffff]/40 px-6 py-3 text-sm text-[#ffffff] transition-colors hover:bg-[#ffffff]/10"
+              className="rounded-full border border-[#468683]/40 px-6 py-3 text-sm text-[#468683] transition-colors hover:bg-[#468683]/10"
             >
               Tornar-se voluntário
             </Link>
             <Link
               href="/atendimento"
-              className="rounded-full border border-[#ffffff]/40 px-6 py-3 text-sm text-[#ffffff] transition-colors hover:bg-[#ffffff]/10"
+              className="rounded-full border border-[#468683]/40 px-6 py-3 text-sm text-[#468683] transition-colors hover:bg-[#468683]/10"
             >
               Solicitar atendimento
             </Link>

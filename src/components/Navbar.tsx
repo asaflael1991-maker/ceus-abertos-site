@@ -1,12 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 /**
  * Navbar — menu fixo no topo. Como este é um site de VÁRIAS páginas
  * (não uma home única com âncoras), os links aqui apontam direto pra
  * cada rota. No mobile, tudo colapsa num dropdown de hambúrguer.
+ *
+ * Só na Home, enquanto o hero (banner do céu) ainda está visível, o
+ * menu fica transparente com texto branco — assim que a pessoa rola
+ * além do hero (ou em qualquer outra página), volta ao normal (fundo
+ * branco, texto escuro).
  *
  * OBS: ainda não temos uma logo definitiva da Associação Céus Abertos
  * (é diferente da logo da Igreja Colheita). Por enquanto uso um
@@ -31,8 +37,8 @@ function Selo() {
       className="h-9 w-9 shrink-0"
       aria-hidden
     >
-      <circle cx="20" cy="20" r="19" fill="none" stroke="#f8a800" strokeWidth="1.5" />
-      <circle cx="20" cy="20" r="7" fill="#f8a800" />
+      <circle cx="20" cy="20" r="19" fill="none" stroke="#468683" strokeWidth="1.5" />
+      <circle cx="20" cy="20" r="7" fill="#468683" />
       {Array.from({ length: 8 }).map((_, i) => {
         const angle = (i * Math.PI) / 4;
         const x1 = 20 + Math.cos(angle) * 11;
@@ -46,7 +52,7 @@ function Selo() {
             y1={y1}
             x2={x2}
             y2={y2}
-            stroke="#f8a800"
+            stroke="#468683"
             strokeWidth="1.5"
             strokeLinecap="round"
           />
@@ -58,9 +64,34 @@ function Selo() {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolledPastHero, setScrolledPastHero] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  useEffect(() => {
+    if (!isHome) return;
+
+    const onScroll = () => {
+      setScrolledPastHero(window.scrollY > window.innerHeight * 0.85);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isHome]);
+
+  // Some (fica transparente) só na Home, enquanto o hero está visível
+  // e o menu mobile não está aberto (com o menu aberto, sempre sólido,
+  // pra manter os links legíveis).
+  const transparent = isHome && !scrolledPastHero && !open;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#1d1d1b]/10 bg-[#ffffff]/90 backdrop-blur">
+    <header
+      className={`sticky top-0 z-50 transition-colors duration-300 ${
+        transparent
+          ? "bg-transparent"
+          : "border-b border-[#1d1d1b]/10 bg-[#ffffff]/90 backdrop-blur"
+      }`}
+    >
       <nav className="relative mx-auto flex min-h-[4.5rem] max-w-[1440px] items-center px-6 py-2 lg:px-12">
         <Link
           href="/"
@@ -68,7 +99,11 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         >
           <Selo />
-          <span className="text-lg font-medium leading-tight tracking-tight">
+          <span
+            className={`text-lg font-medium leading-tight tracking-tight transition-colors ${
+              transparent ? "text-[#ffffff]" : "text-[#1d1d1b]"
+            }`}
+          >
             Céus
             <br />
             Abertos
@@ -80,7 +115,11 @@ export default function Navbar() {
             <li key={p.href}>
               <Link
                 href={p.href}
-                className="text-sm text-[#1d1d1b]/70 transition-colors hover:text-[#1d1d1b]"
+                className={`text-sm transition-colors ${
+                  transparent
+                    ? "text-[#ffffff]/90 hover:text-[#ffffff]"
+                    : "text-[#1d1d1b]/70 hover:text-[#1d1d1b]"
+                }`}
               >
                 {p.label}
               </Link>
@@ -90,7 +129,7 @@ export default function Navbar() {
 
         <Link
           href="/doacoes"
-          className="ml-auto hidden shrink-0 rounded-full bg-[#e5192c] px-4 py-2 text-sm text-[#ffffff] transition-opacity hover:opacity-90 lg:block"
+          className="ml-auto hidden shrink-0 rounded-full bg-[#468683] px-4 py-2 text-sm text-[#ffffff] transition-opacity hover:opacity-90 lg:block"
         >
           Fazer doação
         </Link>
@@ -104,20 +143,20 @@ export default function Navbar() {
           className="ml-auto flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
           <span
-            className={`h-px w-6 bg-[#1d1d1b] transition-transform ${
-              open ? "translate-y-[3.5px] rotate-45" : ""
-            }`}
+            className={`h-px w-6 transition-transform ${
+              transparent ? "bg-[#ffffff]" : "bg-[#1d1d1b]"
+            } ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
           />
           <span
-            className={`h-px w-6 bg-[#1d1d1b] transition-transform ${
-              open ? "-translate-y-[3.5px] -rotate-45" : ""
-            }`}
+            className={`h-px w-6 transition-transform ${
+              transparent ? "bg-[#ffffff]" : "bg-[#1d1d1b]"
+            } ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
           />
         </button>
       </nav>
 
       {open && (
-        <ul className="flex flex-col gap-1 border-t border-[#1d1d1b]/10 px-6 py-4 lg:hidden">
+        <ul className="flex flex-col gap-1 border-t border-[#1d1d1b]/10 bg-[#ffffff] px-6 py-4 lg:hidden">
           {pages.map((p) => (
             <li key={p.href}>
               <Link
@@ -134,7 +173,7 @@ export default function Navbar() {
             <Link
               href="/doacoes"
               onClick={() => setOpen(false)}
-              className="inline-block rounded-full bg-[#e5192c] px-4 py-2 text-sm text-[#ffffff]"
+              className="inline-block rounded-full bg-[#468683] px-4 py-2 text-sm text-[#ffffff]"
             >
               Fazer doação
             </Link>
