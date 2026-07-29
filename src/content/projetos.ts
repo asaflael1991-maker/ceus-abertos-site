@@ -59,10 +59,11 @@ export const projetos: Projeto[] = [
     slug: "cursos",
     nome: "Cursos",
     resumo:
-      "Cursos profissionalizantes e capacitações para jovens e adultos ingressarem ou retornarem ao mercado de trabalho.",
+      "Cursos de formação ministerial, preparando pessoas para servir nos diferentes chamados da igreja.",
     descricao: [
-      "Os cursos oferecidos pela Associação Cristã Céus Abertos têm como objetivo ampliar as oportunidades de qualificação profissional de jovens e adultos da comunidade.",
-      "Por meio de capacitações, oficinas e cursos profissionalizantes, o projeto busca contribuir para a autonomia financeira das famílias atendidas e para a construção de novas oportunidades de trabalho e renda.",
+      "Os cursos oferecidos pela Associação Cristã Céus Abertos têm como objetivo formar e capacitar pessoas para servir nos ministérios da igreja, aprofundando o conhecimento bíblico e desenvolvendo o chamado de cada um.",
+      "As turmas são voltadas aos cinco ministérios: pastorado, evangelista, profecia, adoração e mestre — preparando líderes e voluntários para exercer essas funções com maturidade espiritual e responsabilidade.",
+      "Mais do que ensinar conteúdo, os cursos existem para formar pessoas comprometidas com o Reino de Deus e prontas para servir à igreja e à comunidade.",
     ],
     galeriaLabel: "Cursos",
   },
