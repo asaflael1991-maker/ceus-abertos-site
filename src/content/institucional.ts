@@ -200,68 +200,358 @@ export const impactoEsperado = [
   "Transformação espiritual e social por meio do Evangelho",
 ];
 
-export const galeria = [
+export type GaleriaCategoria = {
+  label: string;
+  fotos: { src: string; alt: string }[];
+};
+
+export const galeriaCategorias: GaleriaCategoria[] = [
   {
-    src: "/images/galeria/foto-01.jpg",
-    alt: "Voluntários organizando doações no Mercado Solidário",
+    label: "Mercado Solidário",
+    fotos: [
+  {
+    src: "/images/galeria/mercado-solidario/foto-01.jpg",
+    alt: "Mercado Solidário da Associação Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-02.jpg",
-    alt: "Atendimento a famílias no Mercado Solidário",
+    src: "/images/galeria/mercado-solidario/foto-02.jpg",
+    alt: "Mercado Solidário da Associação Céus Abertos",
+  },
+],
   },
   {
-    src: "/images/galeria/foto-03.jpg",
+    label: "Ação Social",
+    fotos: [
+  {
+    src: "/images/galeria/acao-social/foto-01.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-04.jpg",
+    src: "/images/galeria/acao-social/foto-02.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-05.jpg",
+    src: "/images/galeria/acao-social/foto-03.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-06.jpg",
+    src: "/images/galeria/acao-social/foto-04.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-07.jpg",
+    src: "/images/galeria/acao-social/foto-05.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-08.jpg",
+    src: "/images/galeria/acao-social/foto-06.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-09.jpg",
+    src: "/images/galeria/acao-social/foto-07.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-10.jpg",
+    src: "/images/galeria/acao-social/foto-08.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-11.jpg",
+    src: "/images/galeria/acao-social/foto-09.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-12.jpg",
+    src: "/images/galeria/acao-social/foto-10.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-13.jpg",
+    src: "/images/galeria/acao-social/foto-11.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-14.jpg",
+    src: "/images/galeria/acao-social/foto-12.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
   },
   {
-    src: "/images/galeria/foto-15.jpg",
+    src: "/images/galeria/acao-social/foto-13.jpg",
     alt: "Ação social da Associação Cristã Céus Abertos",
+  },
+],
+  },
+  {
+    label: "Associação Céus Abertos",
+    fotos: [
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-01.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-02.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-03.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-04.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-05.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-06.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-07.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-08.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-09.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-10.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-11.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-12.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-13.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-14.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-15.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-16.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-17.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-18.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-19.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-20.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-21.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-22.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-23.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-24.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-25.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-26.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-27.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-28.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-29.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-30.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-31.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-32.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-33.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-34.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-35.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-36.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-37.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/associacao-ceus-abertos/foto-38.jpg",
+    alt: "Atividade da Associação Cristã Céus Abertos",
+  },
+],
+  },
+  {
+    label: "Cursos",
+    fotos: [
+  {
+    src: "/images/galeria/cursos/foto-01.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-02.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-03.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-04.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-05.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-06.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-07.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-08.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-09.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-10.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-11.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-12.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-13.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-14.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-15.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-16.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-17.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/cursos/foto-18.jpg",
+    alt: "Curso oferecido pela Associação Cristã Céus Abertos",
+  },
+],
+  },
+  {
+    label: "Kids",
+    fotos: [
+  {
+    src: "/images/galeria/kids/foto-01.jpg",
+    alt: "Atividade com crianças da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/kids/foto-02.jpg",
+    alt: "Atividade com crianças da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/kids/foto-03.jpg",
+    alt: "Atividade com crianças da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/kids/foto-04.jpg",
+    alt: "Atividade com crianças da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/kids/foto-05.jpg",
+    alt: "Atividade com crianças da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/kids/foto-06.jpg",
+    alt: "Atividade com crianças da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/kids/foto-07.jpg",
+    alt: "Atividade com crianças da Associação Cristã Céus Abertos",
+  },
+  {
+    src: "/images/galeria/kids/foto-08.jpg",
+    alt: "Atividade com crianças da Associação Cristã Céus Abertos",
+  },
+],
   },
 ];
+
+/** Lista simples (todas as categorias juntas) — mantida por
+ *  compatibilidade, caso algum lugar ainda queira só uma lista única. */
+export const galeria = galeriaCategorias.flatMap((c) => c.fotos);
 
 /** Áreas de interesse oferecidas no formulário de voluntariado —
  *  reaproveita os títulos das áreas de atuação. */
