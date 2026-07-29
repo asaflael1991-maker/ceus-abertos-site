@@ -78,4 +78,16 @@ export const projetos: Projeto[] = [
     ],
     galeriaLabel: "Associação Céus Abertos",
   },
+  {
+    slug: "montanha",
+    nome: "Montanha",
+    resumo:
+      "Retiro voltado a homens que buscam disciplina, autocontrole e maturidade emocional.",
+    descricao: [
+      "O projeto Montanha é um retiro voltado aos homens da comunidade, criado como um espaço de reflexão, quebrantamento e busca por disciplina, autocontrole e maturidade emocional.",
+      "Longe da rotina do dia a dia, em contato com a natureza, os participantes vivem momentos de oração, comunhão e desafios físicos que ajudam a fortalecer o caráter e o compromisso de cada um com sua própria transformação.",
+      "Mais do que uma trilha ou uma caminhada, o Montanha é um convite para que cada homem enfrente seus próprios limites e volte para casa mais firme em seus propósitos — com Deus, com a família e consigo mesmo.",
+    ],
+    galeriaLabel: "Montanha",
+  },
 ];

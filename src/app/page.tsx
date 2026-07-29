@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import ProjectsMarquee from "@/components/ProjectsMarquee";
 import Hero from "@/components/Hero";
+import FloatingImage from "@/components/FloatingImage";
 import { TagList } from "@/components/Lists";
 import { causaAtendida, areasDeAtuacao } from "@/content/institucional";
 
@@ -21,20 +22,30 @@ export default function HomePage() {
         eyebrow="Quem somos"
         title="Uma associação a serviço da comunidade."
       >
-        <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-[#1d1d1b]/70">
-          <p>
-            A Associação Cristã Céus Abertos é uma organização social cristã,
-            sem fins lucrativos, sediada em Fortaleza, Ceará. Cuidamos de
-            famílias, crianças, adolescentes, jovens e pessoas em situação de
-            vulnerabilidade, oferecendo alimento, acolhimento e novas
-            oportunidades.
-          </p>
-          <Link
-            href="/quem-somos"
-            className="inline-block rounded-full border border-[#468683]/40 px-6 py-3 text-sm text-[#468683] transition-colors hover:bg-[#468683]/10"
-          >
-            Conheça nossa história
-          </Link>
+        <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
+          <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-[#1d1d1b]/70">
+            <p>
+              A Associação Cristã Céus Abertos é uma organização social cristã,
+              sem fins lucrativos, sediada em Fortaleza, Ceará. Cuidamos de
+              famílias, crianças, adolescentes, jovens e pessoas em situação de
+              vulnerabilidade, oferecendo alimento, acolhimento e novas
+              oportunidades.
+            </p>
+            <Link
+              href="/quem-somos"
+              className="inline-block rounded-full border border-[#468683]/40 px-6 py-3 text-sm text-[#468683] transition-colors hover:bg-[#468683]/10"
+            >
+              Conheça nossa história
+            </Link>
+          </div>
+
+          <FloatingImage
+            src="/images/home/crianca.png"
+            alt="Criança abraçada a uma nuvem em formato de coração"
+            width={1080}
+            height={1080}
+            className="mx-auto w-48 sm:w-64 lg:w-full"
+          />
         </div>
       </Section>
 

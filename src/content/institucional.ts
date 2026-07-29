@@ -545,6 +545,39 @@ export const galeriaCategorias: GaleriaCategoria[] = [
       },
     ],
   },
+  {
+    label: "Montanha",
+    fotos: [
+      {
+        src: "/images/galeria/montanha/foto-01.jpg",
+        alt: "Retiro Montanha da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/montanha/foto-02.jpg",
+        alt: "Retiro Montanha da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/montanha/foto-03.jpg",
+        alt: "Retiro Montanha da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/montanha/foto-04.jpg",
+        alt: "Retiro Montanha da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/montanha/foto-05.jpg",
+        alt: "Retiro Montanha da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/montanha/foto-06.jpg",
+        alt: "Retiro Montanha da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/montanha/foto-07.jpg",
+        alt: "Retiro Montanha da Associação Cristã Céus Abertos",
+      },
+    ],
+  },
 ];
 
 /** Lista simples (todas as categorias juntas) — mantida por
