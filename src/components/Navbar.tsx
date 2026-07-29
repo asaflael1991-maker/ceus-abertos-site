@@ -105,18 +105,20 @@ export default function Navbar() {
               </svg>
             </Link>
 
-            <ul className="invisible absolute left-1/2 top-full mt-3 w-56 -translate-x-1/2 rounded-xl border border-[#1d1d1b]/10 bg-[#ffffff] p-2 opacity-0 shadow-lg transition-opacity duration-150 group-hover:visible group-hover:opacity-100">
-              {projetos.map((p) => (
-                <li key={p.slug}>
-                  <Link
-                    href={`/projetos/${p.slug}`}
-                    className="block rounded-lg px-3 py-2 text-sm text-[#1d1d1b]/70 transition-colors hover:bg-[#468683]/10 hover:text-[#1d1d1b]"
-                  >
-                    {p.nome}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="invisible absolute left-1/2 top-full w-56 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100">
+              <ul className="rounded-xl border border-[#1d1d1b]/10 bg-[#ffffff] p-2 shadow-lg">
+                {projetos.map((p) => (
+                  <li key={p.slug}>
+                    <Link
+                      href={`/projetos/${p.slug}`}
+                      className="block rounded-lg px-3 py-2 text-sm text-[#1d1d1b]/70 transition-colors hover:bg-[#468683]/10 hover:text-[#1d1d1b]"
+                    >
+                      {p.nome}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </li>
 
           {pagesAfter.map((p) => (
