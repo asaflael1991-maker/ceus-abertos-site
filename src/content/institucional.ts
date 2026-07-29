@@ -220,63 +220,6 @@ export const galeriaCategorias: GaleriaCategoria[] = [
 ],
   },
   {
-    label: "Ação Social",
-    fotos: [
-  {
-    src: "/images/galeria/acao-social/foto-01.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-02.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-03.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-04.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-05.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-06.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-07.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-08.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-09.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-10.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-11.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-12.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-  {
-    src: "/images/galeria/acao-social/foto-13.jpg",
-    alt: "Ação social da Associação Cristã Céus Abertos",
-  },
-],
-  },
-  {
     label: "Associação Céus Abertos",
     fotos: [
   {

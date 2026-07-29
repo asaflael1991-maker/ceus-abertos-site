@@ -57,6 +57,9 @@ export default function Footer() {
             <Link href="/areas-de-atuacao" className="hover:text-[#ffffff]">
               Áreas de atuação
             </Link>
+            <Link href="/projetos" className="hover:text-[#ffffff]">
+              Projetos
+            </Link>
             <Link href="/galeria" className="hover:text-[#ffffff]">
               Galeria
             </Link>

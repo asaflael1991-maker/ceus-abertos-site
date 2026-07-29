@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import LogoMark from "@/components/LogoMark";
+import { projetos } from "@/content/projetos";
 
 /**
  * Navbar — menu fixo no topo. Como este é um site de VÁRIAS páginas
@@ -16,10 +17,13 @@ import LogoMark from "@/components/LogoMark";
  * branco, texto escuro).
  */
 
-const pages = [
+const pagesBefore = [
   { href: "/", label: "Início" },
   { href: "/quem-somos", label: "Quem somos" },
   { href: "/areas-de-atuacao", label: "Áreas de atuação" },
+];
+
+const pagesAfter = [
   { href: "/voluntariado", label: "Voluntariado" },
   { href: "/atendimento", label: "Solicitar atendimento" },
   { href: "/galeria", label: "Galeria" },
@@ -70,7 +74,51 @@ export default function Navbar() {
         </Link>
 
         <ul className="mx-auto hidden flex-wrap items-center justify-center gap-x-6 gap-y-1 lg:flex">
-          {pages.map((p) => (
+          {pagesBefore.map((p) => (
+            <li key={p.href}>
+              <Link
+                href={p.href}
+                className={`text-sm transition-colors ${
+                  transparent
+                    ? "text-[#ffffff]/90 hover:text-[#ffffff]"
+                    : "text-[#1d1d1b]/70 hover:text-[#1d1d1b]"
+                }`}
+              >
+                {p.label}
+              </Link>
+            </li>
+          ))}
+
+          <li className="group relative">
+            <Link
+              href="/projetos"
+              className={`flex items-center gap-1 text-sm transition-colors ${
+                transparent
+                  ? "text-[#ffffff]/90 hover:text-[#ffffff]"
+                  : "text-[#1d1d1b]/70 hover:text-[#1d1d1b]"
+              }`}
+            >
+              Projetos
+              <svg viewBox="0 0 10 6" className="h-1.5 w-2.5 fill-current">
+                <path d="M0 0 L5 6 L10 0 Z" />
+              </svg>
+            </Link>
+
+            <ul className="invisible absolute left-1/2 top-full mt-3 w-56 -translate-x-1/2 rounded-xl border border-[#1d1d1b]/10 bg-[#ffffff] p-2 opacity-0 shadow-lg transition-opacity duration-150 group-hover:visible group-hover:opacity-100">
+              {projetos.map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    href={`/projetos/${p.slug}`}
+                    className="block rounded-lg px-3 py-2 text-sm text-[#1d1d1b]/70 transition-colors hover:bg-[#468683]/10 hover:text-[#1d1d1b]"
+                  >
+                    {p.nome}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+
+          {pagesAfter.map((p) => (
             <li key={p.href}>
               <Link
                 href={p.href}
@@ -116,7 +164,42 @@ export default function Navbar() {
 
       {open && (
         <ul className="flex flex-col gap-1 border-t border-[#1d1d1b]/10 bg-[#ffffff] px-6 py-4 lg:hidden">
-          {pages.map((p) => (
+          {pagesBefore.map((p) => (
+            <li key={p.href}>
+              <Link
+                href={p.href}
+                onClick={() => setOpen(false)}
+                className="block py-2 text-sm text-[#1d1d1b]/80"
+              >
+                {p.label}
+              </Link>
+            </li>
+          ))}
+
+          <li>
+            <Link
+              href="/projetos"
+              onClick={() => setOpen(false)}
+              className="block py-2 text-sm font-medium text-[#1d1d1b]"
+            >
+              Projetos
+            </Link>
+            <ul className="ml-3 flex flex-col gap-1 border-l border-[#1d1d1b]/10 pl-3">
+              {projetos.map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    href={`/projetos/${p.slug}`}
+                    onClick={() => setOpen(false)}
+                    className="block py-1.5 text-sm text-[#1d1d1b]/70"
+                  >
+                    {p.nome}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+
+          {pagesAfter.map((p) => (
             <li key={p.href}>
               <Link
                 href={p.href}
