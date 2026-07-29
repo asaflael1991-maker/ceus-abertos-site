@@ -22,7 +22,7 @@ export default function HomePage() {
         eyebrow="Quem somos"
         title="Uma associação a serviço da comunidade."
       >
-        <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
+        <div className="grid items-start gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-[#1d1d1b]/70">
             <p>
               A Associação Cristã Céus Abertos é uma organização social cristã,
