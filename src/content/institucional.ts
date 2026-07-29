@@ -547,6 +547,61 @@ export const galeriaCategorias: GaleriaCategoria[] = [
   },
 ],
   },
+  {
+    label: "Balé",
+    fotos: [
+      {
+        src: "/images/galeria/bale/foto-01.jpg",
+        alt: "Apresentação de balé da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/bale/foto-02.jpg",
+        alt: "Aula de balé da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/bale/foto-03.jpg",
+        alt: "Apresentação de balé da Associação Cristã Céus Abertos",
+      },
+    ],
+  },
+  {
+    label: "Células",
+    fotos: [
+      {
+        src: "/images/galeria/celulas/foto-01.jpg",
+        alt: "Encontro de célula da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/celulas/foto-02.jpg",
+        alt: "Encontro de célula da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/celulas/foto-03.jpg",
+        alt: "Encontro de célula da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/celulas/foto-04.jpg",
+        alt: "Encontro de célula da Associação Cristã Céus Abertos",
+      },
+    ],
+  },
+  {
+    label: "Krav Maga",
+    fotos: [
+      {
+        src: "/images/galeria/krav-maga/foto-01.jpg",
+        alt: "Aula de Krav Maga da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/krav-maga/foto-02.jpg",
+        alt: "Aula de Krav Maga da Associação Cristã Céus Abertos",
+      },
+      {
+        src: "/images/galeria/krav-maga/foto-03.jpg",
+        alt: "Aula de Krav Maga da Associação Cristã Céus Abertos",
+      },
+    ],
+  },
 ];
 
 /** Lista simples (todas as categorias juntas) — mantida por
