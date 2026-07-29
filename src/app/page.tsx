@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Section from "@/components/Section";
+import ProjectsMarquee from "@/components/ProjectsMarquee";
 import Hero from "@/components/Hero";
 import { TagList } from "@/components/Lists";
 import { causaAtendida, areasDeAtuacao } from "@/content/institucional";
@@ -113,6 +114,38 @@ export default function HomePage() {
           </div>
         </div>
       </Section>
+
+      <Section
+        id="faca-parte"
+        number="05"
+        eyebrow="Faça parte"
+        title="Faça parte de um projeto da Céus Abertos!"
+      >
+        <div className="max-w-2xl space-y-6 text-lg leading-relaxed text-[#1d1d1b]/70">
+          <p>
+            Do Mercado Solidário ao Krav Maga, do Balé às Células — nossos
+            projetos são um ambiente perfeito pra você servir, crescer e
+            estar perto de quem também acredita nessa missão.
+          </p>
+          <Link
+            href="/faca-parte/formulario"
+            className="inline-flex items-center gap-3 rounded-full bg-[#ffffff] py-2 pl-2 pr-6 text-sm shadow-md ring-1 ring-[#1d1d1b]/10 transition-shadow hover:shadow-lg"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#468683] text-[#ffffff]">
+              <svg viewBox="0 0 20 20" className="h-4 w-4 fill-current">
+                <path d="M2 10a1 1 0 0 1 1-1h11.6l-3.3-3.3a1 1 0 1 1 1.4-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3H3a1 1 0 0 1-1-1Z" />
+              </svg>
+            </span>
+            <span className="font-medium text-[#1d1d1b]">
+              Quero fazer parte
+            </span>
+          </Link>
+        </div>
+      </Section>
+
+      <div className="border-b border-[#1d1d1b]/10 bg-[#ffffff] pb-16">
+        <ProjectsMarquee />
+      </div>
 
       <Footer />
     </>

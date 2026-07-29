@@ -60,6 +60,9 @@ export default function Footer() {
             <Link href="/projetos" className="hover:text-[#ffffff]">
               Projetos
             </Link>
+            <Link href="/faca-parte" className="hover:text-[#ffffff]">
+              Faça parte
+            </Link>
             <Link href="/galeria" className="hover:text-[#ffffff]">
               Galeria
             </Link>

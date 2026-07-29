@@ -24,6 +24,7 @@ const pagesBefore = [
 ];
 
 const pagesAfter = [
+  { href: "/faca-parte", label: "Faça parte" },
   { href: "/voluntariado", label: "Voluntariado" },
   { href: "/atendimento", label: "Solicitar atendimento" },
   { href: "/galeria", label: "Galeria" },
