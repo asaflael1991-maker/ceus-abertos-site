@@ -42,9 +42,9 @@ export default function HomePage() {
           <FloatingImage
             src="/images/home/crianca.png"
             alt="Criança abraçada a uma nuvem em formato de coração"
-            width={1080}
-            height={1080}
-            className="mx-auto w-48 sm:w-64 lg:w-full"
+            width={1682}
+            height={1682}
+            className="mx-auto w-48 sm:w-64 lg:ml-auto lg:mr-0 lg:w-72"
           />
         </div>
       </Section>
